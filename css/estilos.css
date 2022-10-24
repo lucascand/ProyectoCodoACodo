@@ -1,0 +1,237 @@
+
+*{
+    padding: 0;
+    margin: 3px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.slider{
+    height: auto;
+    overflow: hidden;
+    width:100%;
+    text-align: center;
+}
+
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate-reverse linear;
+    width: 400%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none
+}
+
+.slider img{
+    width: 70vw;
+    height: auto;
+    align-items: center;
+}
+
+@keyframes cambio {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    background-color: rgb(45, 23, 126);
+    text-align: center;
+    border-radius: 7px;
+}
+
+.texto{
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+.header {
+    grid-area: header;
+    background-color: darkblue; 
+    color: antiquewhite;
+    position: sticky;
+    top: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100px;
+    border-radius: 8px;
+    width: auto;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 1em;
+    padding: 1em;
+    height: 100vh;
+    align-items: center;
+    }
+
+.main {
+    grid-area: main;
+    padding-left: 0 1%;
+    text-align: justify;
+}
+
+.aside {
+    grid-area: aside;
+    padding: 1%;
+    text-align: justify;
+}
+
+.map{
+    width: 100%;
+    height: 40vh;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: dodgerblue; color:black; font-weight: 100;
+    position:static;
+    bottom: 0;
+    border-radius: 5px;
+    font-size: 1.3vw;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+
+
+.button{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1vw;
+}
+
+.pag {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    display: flex;
+    font-size: 2vw;
+    margin-top: 20px;
+    width: max-content;
+}
+
+.pag:hover{
+    background-color: rgb(82, 82, 143);
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.hamburguesa{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0, 20;
+    line-height: 30px;
+    display: none;
+}
+
+
+@media (max-width: 320px) {
+    .header {
+        height: 40px;
+        width: 100%;
+    }
+
+
+    .titulo{
+        font-size: 12px;
+    }
+    
+    .texto{
+        font-size: 10px;
+        text-align: justify;
+    }
+    
+    .map{
+        width: 100%;
+        height: 120px;
+    }
+    
+    .footer {
+        display:none;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+    
+    .button{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        list-style: none;
+        font-size: 10px;
+    }
+    
+    .pag {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 5x;
+        font-size: 8px;
+        margin-top: 5px;
+        position: fixed;
+        padding: 20px 0;
+        height: calc(100% - 20px);
+        overflow-y: auto;
+        left: 100%;
+    }
+    
+    .hamburguesa{
+    display: block;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+    .footer {
+        display:none;
+    }
+    
+    .titulo{
+        font-size: 20px;
+    }
+
+    .texto{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        vertical-align: middle;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+}
